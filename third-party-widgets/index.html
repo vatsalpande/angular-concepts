@@ -1,0 +1,24 @@
+<html ng-app="app">
+<head>
+    <title>My Angular app</title>
+    <script src="content/js/angular.js"></script>
+    <script src="content/js/pikaday.js"></script>
+    <script src="content/css/pikaday.css"></script>
+</head>
+<body>
+<div ng-controller="DateController as ctrl">
+    Parent date: {{ ctrl.date | date: 'MMM d, yyyy' }}
+    <date-picker date="ctrl.date"></date-picker>
+
+</div>
+
+
+
+
+<script src="content/js/app.js"></script>
+<script src="content/js/services/PikadayService.js"></script>
+<script src="content/js/controller/DateController.js"></script>
+<script src="content/js/directives/DatePicker.js"></script>
+
+</body>
+</html>

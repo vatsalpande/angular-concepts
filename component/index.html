@@ -1,0 +1,27 @@
+<html ng-app="app">
+<head>
+    <title>Component Method</title>
+    <script src="content/js/angular.js"></script>
+    <style>
+        input { text-align: center; border: 1px solid #eee; background: #fff; border-radius: 3px; margin: 0 2px 0 0;}
+        button { border: 0; background: #eee; border-radius: 3px; margin: 0 2px 0 0; }
+        .todo {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div ng-controller="MainController as main">
+        <counter count="main.count"></counter>
+    </div>
+</body>
+
+<script src="content/js/app.js"></script>
+<script src="content/js/component/counter.component.js"></script>
+<script src="content/js/controller/MainController.js"></script>
+<!--<script src="content/js/directive/counter.directive.js"></script>-->
+
+
+</body>
+</html>

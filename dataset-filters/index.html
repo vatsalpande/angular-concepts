@@ -1,0 +1,41 @@
+<html ng-app="app">
+<head>
+    <title>Dataset Filters</title>
+    <script src="content/js/angular.js"></script>
+    <style>
+        ul { margin: 0; padding: 0; border-radius: 3px; overflow: hidden; }
+        ul li { overflow: hidden; padding: 0 15px; }
+        .male { background: #2c3e50; color: #fff; }
+        .female { background: #d35400; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div ng-controller="Tournament as tournament">
+        Filter By
+        <a href = "" ng-click="gender=undefined">All</a>
+        <a href = "" ng-click="gender='Male'">Male</a>
+        <a href = "" ng-click="gender='Female'">Female</a>
+         <ul>
+             <li ng-repeat="player in tournament.players | gender: gender | orderBy: 'rank'"
+                ng-class="{
+                    male : player.gender === 'Male',
+                    female : player.gender === 'Female'
+                }"
+             >
+                <p>{{player.name}}
+                 <span>{{player.rank | ordinal }}</span >
+                </p>
+             </li>
+         </ul>
+    </div>
+
+
+
+
+<script src="content/js/app.js"></script>
+    <script src="content/js/controller/tournament.controller.js"></script>
+    <script src="content/js/filters/ordinal.js"></script>
+    <script src="content/js/filters/gender.js"></script>
+</body>
+</html>

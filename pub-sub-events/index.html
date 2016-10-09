@@ -1,0 +1,29 @@
+<html ng-app="app">
+<head>
+    <title>My Angular app</title>
+    <script src="content/js/angular.js"></script>
+    <style>
+        .parent { border: 1px solid red; padding: 25px; }
+        .child { border: 1px solid blue; padding: 25px; }
+    </style>
+</head>
+<body>
+<div class="parent" ng-controller="ContactController as contact">
+    <a href = "" ng-click="contact.logoutUser()">LogOut</a>
+    <ul>
+        <li ng-repeat="item in contact.contacts">
+            <p>Name: {{item.name}}</p>
+            <p>Email: {{item.email}}</p>
+        </li>
+    </ul>
+    <user-manager></user-manager>
+</div>
+
+
+
+
+<script src="content/js/app.js"></script>
+<script src="content/js/controller/contact.controller.js"></script>
+<script src="content/js/component/user-manager.component.js"></script>
+</body>
+</html>

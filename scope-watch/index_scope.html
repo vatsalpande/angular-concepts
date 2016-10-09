@@ -1,0 +1,24 @@
+<html ng-app="app">
+    <head>
+    <title>My Angular app</title>
+<script src="content/js/angular.js"></script>
+    </head>
+    <body>
+    <div class="counter" ng-controller="CounterController">
+    <h3>Counter: {{ count }}</h3>
+    <a class="counter__increment" href="" ng-click="increment()">
+        Increment Counter
+    </a> -
+    <a class="counter__decrement" href="" ng-click="decrement()">
+        Decrement Counter
+    </a>
+<ul>
+<li ng-repeat="list in countList">
+    <input type="text" ng-model="list.id">
+    </li>
+    </ul>
+    </div>
+    <script src="content/js/app.js"></script>
+    <script src="content/js/controllers/CounterController_scope.js"></script>
+    </body>
+    </html>
